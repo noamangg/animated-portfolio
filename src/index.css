@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eudoxus Sans", sans-serif;
+  scroll-behavior: smooth;
+
+  --primary-color: #0d2f3f;
+  --secondary-color: #186b67;
+  --secondary-white-color: #e7e7e7;
+}
+:is(#experience, #services, #portfolio, #testimonials) {
+
+  scroll-margin-top:6rem;
+}
+
+@layer utilities {
+  .c-yellow {
+    color: #ffd341;
+  }
+  .bg-primary {
+    background: #f8f7f1;
+  }
+
+  .c-secondary {
+    color: var(--secondary-color, #286f6c);
+  }
+  .c-primary {
+    color: var(--primary-color, #286f6c);
+  }
+  .bg-size-custom {
+    background-size: 2px 30px;
+    background-image: linear-gradient(#0d2f3f 33%, rgba(255,255,255,0)0%)
+  }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
